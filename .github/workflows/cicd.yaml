@@ -31,8 +31,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/health-website:${{ github.run_number }}
-            ghcr.io/${{ github.repository_owner }}/health-website:latest
+            ghcr.io/veenayadav02/health-website:${{ github.run_number }}
+            ghcr.io/veenayadav02/health-website:latest
 
       - name: Update GitOps Manifest
         run: |
@@ -43,7 +43,7 @@ jobs:
 
           echo "Updating file: $FILE_PATH"
 
-          sed -i "s|image:.*|image: ghcr.io/${{ github.repository_owner }}/health-website:${{ github.run_number }}|g" "$FILE_PATH"
+          sed -i "s|image:.*|image: ghcr.io/veenayadav02/health-website:${{ github.run_number }}|g" "$FILE_PATH"
 
           git add "$FILE_PATH"
           git commit -m "Update image to run-${{ github.run_number }}" || echo "No changes to commit"
