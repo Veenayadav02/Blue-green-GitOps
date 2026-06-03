@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/veenayadav02/health-website:1
+        image: ghcr.io/veenayadav02/health-website:4
         ports:
         - containerPort: 80
 
