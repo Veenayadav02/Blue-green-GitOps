@@ -27,6 +27,6 @@ spec:
 
       autoPromotionEnabled: false
 
-      previewReplicaCount: 1
+      previewReplicaCount: 3
 
       scaleDownDelaySeconds: 30
